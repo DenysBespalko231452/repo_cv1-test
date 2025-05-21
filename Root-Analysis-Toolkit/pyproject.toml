@@ -1,6 +1,6 @@
 [project]
 name = "Root-Analysis-Toolkit"
-version = "0.0.2"
+version = "0.0.1"
 description = "Root Analysis Toolkit (ROALT) leveraging deep-learning based Root Segmentation (ROSE)"
 authors = [
     {name = "JonathanvanSanten234275",email = "234275@buas.nl"},
@@ -17,40 +17,10 @@ dependencies = [
     "typer (>=0.15.3,<0.16.0)",
     "opencv-python (>=4.11.0.86,<5.0.0.0)",
     "pandas (>=2.2.3,<3.0.0)",
-    "pytest (>=8.3.5,<9.0.0)",
-    "ipykernel (>=6.29.5,<7.0.0)",
-    "matplotlib (>=3.10.3,<4.0.0)",
-    "scikit-learn (>=1.6.1,<2.0.0)",
-    "tqdm (>=4.67.1,<5.0.0)",
-    "numpy (<2.0.0)",
 ]
 
 [tool.poetry.dependencies]
 python = ">=3.12,<4.0"
-torch = [{version = "=2.2.2", platform = 'darwin'}, 
-{version = ">=2.7.0,<3.0.0", platform = 'win32', source = "pytorch-gpu-src"}]
-torchvision = [{version = "=0.17.2", platform = 'darwin'}, 
-{version = ">=0.22.0,<0.23.0", platform = 'win32', source = "pytorch-gpu-src"}]
-torchaudio = [{version = "=2.2.2", platform = 'darwin'}, 
-{version = ">=2.7.0,<3.0.0", platform = 'win32', source = "pytorch-gpu-src"}]
-
-[tool.poetry.group.gpu]
-optional = true
-
-[tool.poetry.group.gpu.dependencies]
-torch = {source = "pytorch-gpu-src"}
-torchvision = {source = "pytorch-gpu-src"}
-torchaudio = {source = "pytorch-gpu-src"}
-
-[tool.poetry.group.api.dependencies]
-fastapi = "^0.115.12"
-uvicorn = "^0.34.2"
-python-multipart = "^0.0.20"
-
-[[tool.poetry.source]]
-name = "pytorch-gpu-src"
-url = "https://download.pytorch.org/whl/cu128"
-priority = "explicit"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
